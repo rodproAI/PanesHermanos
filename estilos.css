@@ -76,3 +76,19 @@ h1 {
 .btn-submit:hover {
     background-color: #d35400; 
 }
+
+/*BOTON DELETE*/
+.delete-btn {
+  background-color: #DC3545; 
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer; 
+  margin-top: 10px; 
+}
+
+
+.delete-btn:hover {
+  background-color: #C82333;
+}
