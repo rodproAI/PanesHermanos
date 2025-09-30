@@ -1,3 +1,4 @@
+// app.js  
 function renderProduct(product) {
   return `
     <div class="product-card">
@@ -7,3 +8,18 @@ function renderProduct(product) {
     </div>
   `;
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    /* TAREA 6 DE CÉSAR (FUNCIONALIDAD CREATE)  */
+
+    const formulario = document.querySelector('#form-agregar-producto');
+
+    if (formulario) {
+        formulario.addEventListener('submit', (evento) => {
+            evento.preventDefault();
+            console.log('Formulario capturado, ¡página no recargada!');
+        });
+    }
+});
