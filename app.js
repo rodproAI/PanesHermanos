@@ -1,4 +1,4 @@
-// app.js  
+// app.js 
 function renderProduct(product) {
   return `
     <div class="product-card">
@@ -9,17 +9,37 @@ function renderProduct(product) {
   `;
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
-
-    /* TAREA 6 DE CÉSAR (FUNCIONALIDAD CREATE)  */
 
     const formulario = document.querySelector('#form-agregar-producto');
 
     if (formulario) {
         formulario.addEventListener('submit', (evento) => {
             evento.preventDefault();
-            console.log('Formulario capturado, ¡página no recargada!');
+            
+            // TAREA 7: Leer los datos de los inputs
+            const nombre = document.querySelector('#nombre').value;
+            const descripcion = document.querySelector('#descripcion').value;
+            const precio = document.querySelector('#precio').value;
+            const imagen = document.querySelector('#imagen').value;
+
+            // TAREA 8: Validar que los campos no estén vacíos
+            if (nombre.trim() === '' || descripcion.trim() === '' || precio.trim() === '' || imagen.trim() === '') {
+                alert('Todos los campos son obligatorios.');
+                return; // Detiene la ejecución si hay un error
+            }
+
+            // TAREA 9: Crear un objeto con los datos del producto
+            const producto = {
+                id: Date.now(), 
+                nombre: nombre,
+                descripcion: descripcion,
+                precio: parseFloat(precio), 
+                imagen: imagen
+            };
+
+            console.log('Objeto de producto creado:');
+            console.log(producto);
         });
     }
 });
