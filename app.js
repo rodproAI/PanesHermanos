@@ -23,7 +23,7 @@ function displayProducts() {
     container.innerHTML += renderProduct(product);
   });
 }
-
+//cargar pagina
 document.addEventListener('DOMContentLoaded', () => {
   // Mostrar productos al cargar la página
   displayProducts();
