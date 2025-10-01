@@ -1,4 +1,4 @@
-// app.js  
+// app.js 
 function renderProduct(product) {
   return `
     <div class="product-card">
@@ -9,17 +9,31 @@ function renderProduct(product) {
   `;
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
-
-    /* TAREA 6 DE CÉSAR (FUNCIONALIDAD CREATE)  */
 
     const formulario = document.querySelector('#form-agregar-producto');
 
     if (formulario) {
         formulario.addEventListener('submit', (evento) => {
             evento.preventDefault();
-            console.log('Formulario capturado, ¡página no recargada!');
+            
+            // TAREA 7: Leer los datos de los inputs
+            const nombre = document.querySelector('#nombre').value;
+            const descripcion = document.querySelector('#descripcion').value;
+            const precio = document.querySelector('#precio').value;
+            const imagen = document.querySelector('#imagen').value;
+
+            // TAREA 8: Validar que los campos no estén vacíos
+            if (nombre.trim() === '' || descripcion.trim() === '' || precio.trim() === '' || imagen.trim() === '') {
+                // Si algún campo está vacío, mostramos una alerta
+                alert('Todos los campos son obligatorios.');
+                // y detenemos la ejecución con 'return'
+                return;
+            }
+
+            // Si la validación pasa, continuamos y mostramos los datos
+            console.log('Validación pasada. Datos leídos:');
+            console.log({ nombre, descripcion, precio, imagen });
         });
     }
 });
