@@ -76,3 +76,10 @@ h1 {
 .btn-submit:hover {
     background-color: #d35400; 
 }
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 6px;
+}
