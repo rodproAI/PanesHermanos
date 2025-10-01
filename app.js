@@ -1,3 +1,4 @@
+//daza tarea 1
 function renderProduct(product) {
   return `
     <div class="product-card">
