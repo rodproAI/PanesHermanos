@@ -4,27 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Formulario para agregar productos a la panadería.">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panadería - Agregar Producto</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
-<body>
-
+<body id="page-add-product">
     <main>
         <header>
-            <h1>Agregar Nuevo Pan</h1>
+            <h1 id="titulo-formulario">Agregar Nuevo Pan</h1>
         </header>
+
         <form id="form-agregar-producto">
             <div class="form-group">
-                <div class="form-group">
-                    <label for="nombre">Nombre del pan:</label>
-                    <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
-                </div>
-                <div class="form-group">
-                </div>
-                <button type="submit" class="btn-submit">Agregar Producto</button>
+                <label for="nombre">Nombre del pan:</label>
+                <input type="text" id="nombre" name="nombre" required>
             </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Agregar Producto</button>
         </form>
     </main>
 
