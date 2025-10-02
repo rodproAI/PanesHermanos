@@ -1,6 +1,5 @@
 // app.js
 
-// 1. Array que funcionará como base de datos temporal
 let baseDeDatosProductos = [];
 
 // --- INICIO DE TU MODIFICACIÓN (TAREA 1) ---
