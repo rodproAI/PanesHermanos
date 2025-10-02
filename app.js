@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
             baseDeDatosProductos.push(producto);
             alert('¡Producto agregado con éxito!');
             formulario.reset();
-
             console.log('Base de datos actual:', baseDeDatosProductos);
         });
     }
