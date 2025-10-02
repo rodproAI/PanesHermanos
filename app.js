@@ -4,7 +4,7 @@
 let baseDeDatosProductos = [];
 
 // --- INICIO DE TU MODIFICACIÓN (TAREA 1) ---
-// Se actualiza esta función para incluir el botón de Editar.
+
 function renderProduct(product) {
   return `
     <div class="product-card">
