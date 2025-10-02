@@ -2,7 +2,7 @@
 
 let baseDeDatosProductos = [];
 
-// --- INICIO DE TU MODIFICACIÓN (TAREA 1) ---
+
 
 function renderProduct(product) {
   return `
