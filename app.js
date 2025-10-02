@@ -17,7 +17,7 @@ function renderProduct(product) {
     </div>
   `;
 }
-// --- FIN DE TU MODIFICACIÓN (TAREA 1) ---
+
 
 // Lógica principal que se ejecuta al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
