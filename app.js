@@ -19,7 +19,7 @@ function renderProduct(product) {
 }
 
 
-// Lógica principal que se ejecuta al cargar la p
+// Lógica principal que se ejecuta al cargar l
 document.addEventListener('DOMContentLoaded', () => {
     const formulario = document.querySelector('#form-agregar-producto');
 
