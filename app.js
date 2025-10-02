@@ -1,3 +1,4 @@
+// app.js
 function renderProduct(product) {
   return `
     <div class="product-card" data-id="${product.id}">
