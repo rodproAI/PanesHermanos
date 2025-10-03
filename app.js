@@ -1,4 +1,4 @@
-// app.js  
+// app.js 
 function renderProduct(product) {
   return `
     <div class="product-card">
@@ -8,6 +8,9 @@ function renderProduct(product) {
     </div>
   `;
 }
+document.addEventListener('DOMContentLoaded', () => {
+
+    /* TAREAS DE CÉSAR */
 
 
 ddocument.addEventListener('DOMContentLoaded', () => {
@@ -19,7 +22,15 @@ ddocument.addEventListener('DOMContentLoaded', () => {
     if (formulario) {
         formulario.addEventListener('submit', (evento) => {
             evento.preventDefault();
-            console.log('Formulario capturado, ¡página no recargada!');
+            
+            // TAREA 7 --
+            const nombre = document.querySelector('#nombre').value;
+            const descripcion = document.querySelector('#descripcion').value;
+            const precio = document.querySelector('#precio').value;
+            const imagen = document.querySelector('#imagen').value;
+            console.log('Datos leídos del formulario:');
+            console.log({ nombre, descripcion, precio, imagen });
+            
         });
     }
 });

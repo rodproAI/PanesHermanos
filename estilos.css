@@ -56,5 +56,26 @@ h1 {
 .form-group textarea:focus {
     outline: none;
     border-color: #e67e22;
+    box-shadow: 0 0 8px rgba(230, 126, 34, 0.3);
+}
+
+/*TAREA 5: ESTILOS PARA EL BOTÓN DE ENVÍO*/
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e67e22; 
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px; 
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #d35400; 
     box-shadow: 0 0 8px rgba(230, 126, 34, 0.3); /*sombras*/
 }
