@@ -1,3 +1,4 @@
+// app.js 
 // app.js
 
 // 1. Array que funcionará como base de datos temporal
@@ -44,6 +45,7 @@ ddocument.addEventListener('DOMContentLoaded', () => {
         formulario.addEventListener('submit', (evento) => {
             evento.preventDefault();
             
+            // TAREA 7: 
             // Tarea 7: 
             // Tarea 7: Leer los datos de los inputs
             // TAREA 7 --
@@ -52,6 +54,23 @@ ddocument.addEventListener('DOMContentLoaded', () => {
             const precio = document.querySelector('#precio').value;
             const imagen = document.querySelector('#imagen').value;
 
+            // TAREA 8:
+            if (nombre.trim() === '' || descripcion.trim() === '' || precio.trim() === '' || imagen.trim() === '') {
+                alert('Todos los campos son obligatorios.');
+                return; 
+            }
+
+            // TAREA 9: 
+            const producto = {
+                id: Date.now(), 
+                nombre: nombre,
+                descripcion: descripcion,
+                precio: parseFloat(precio), 
+                imagen: imagen
+            };
+
+            console.log('Objeto de producto creado:');
+            console.log(producto);
             // Tarea 8:
             // Tarea 8: Validar que los campos no estén vacíos
             if (nombre.trim() === '' || descripcion.trim() === '' || precio.trim() === '' || imagen.trim() === '') {
