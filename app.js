@@ -22,13 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
         formulario.addEventListener('submit', (evento) => {
             evento.preventDefault();
             
-            // Tarea 7: Leer
+            // Tarea 7: 
             const nombre = document.querySelector('#nombre').value;
             const descripcion = document.querySelector('#descripcion').value;
             const precio = document.querySelector('#precio').value;
             const imagen = document.querySelector('#imagen').value;
 
-            // Tarea 8: Validar que los campos no estén vacíos
+            // Tarea 8: Validar que los campos no estén 
             if (nombre.trim() === '' || descripcion.trim() === '' || precio.trim() === '' || imagen.trim() === '') {
                 alert('Todos los campos son obligatorios.');
                 return; // Detiene la ejecución si hay un error
