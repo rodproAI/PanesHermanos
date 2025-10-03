@@ -47,7 +47,8 @@ h1 {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* <- AÑADIR ESTA LÍNEA */
+    box-sizing: border-box; 
+    transition: all 0.3s ease;
 }
 
 .form-group input:focus,
