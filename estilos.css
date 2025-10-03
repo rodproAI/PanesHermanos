@@ -61,6 +61,8 @@ h1 {
 .btn-submit {
     display: block;
     width: 100%;
+    padding: 12px;
+    font-size: 16px;
 }
 .btn-submit:hover {
     background-color: #d35400; 
