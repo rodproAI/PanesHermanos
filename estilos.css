@@ -73,5 +73,9 @@ h1 {
 }
 
 .btn-submit:hover {
-    background-color: #c14f03;
+    background-color: #d35400;
+}
+
+.btn-submit:active {
+    transform: translateY(2px); /* Mueve el botón 2px hacia abajo */
 }
