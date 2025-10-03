@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formulario.addEventListener('submit', (evento) => {
             evento.preventDefault();
             
-            // TAREA 7
+            // TAREA 7 --
             const nombre = document.querySelector('#nombre').value;
             const descripcion = document.querySelector('#descripcion').value;
             const precio = document.querySelector('#precio').value;
