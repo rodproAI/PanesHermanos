@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const precio = document.querySelector('#precio').value;
             const imagen = document.querySelector('#imagen').value;
 
-            // Tarea 8: Validar que los campos no estén 
+            // Tarea 8:
             if (nombre.trim() === '' || descripcion.trim() === '' || precio.trim() === '' || imagen.trim() === '') {
                 alert('Todos los campos son obligatorios.');
                 return; // Detiene la ejecución si hay un error
