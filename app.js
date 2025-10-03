@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return; 
             }
 
-            // TAREA 9: Crear un objeto con los datos del producto
+            // TAREA 9: 
             const producto = {
                 id: Date.now(), 
                 nombre: nombre,
