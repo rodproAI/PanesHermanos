@@ -27,6 +27,8 @@ function renderProduct(product) {
   `;
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+
 
 // Lógica principal que se ejecuta al 
 document.addEventListener('DOMContentLoaded', () => {
@@ -45,6 +47,7 @@ ddocument.addEventListener('DOMContentLoaded', () => {
         formulario.addEventListener('submit', (evento) => {
             evento.preventDefault();
             
+            // TAREA 7
             // TAREA 7: 
             // Tarea 7: 
             // Tarea 7: Leer los datos de los inputs
@@ -54,6 +57,16 @@ ddocument.addEventListener('DOMContentLoaded', () => {
             const precio = document.querySelector('#precio').value;
             const imagen = document.querySelector('#imagen').value;
 
+            // TAREA 8: 
+            if (nombre.trim() === '' || descripcion.trim() === '' || precio.trim() === '' || imagen.trim() === '') {
+                // Si algún campo está vacío, mostramos una 
+                alert('Todos los campos son obligatorios.');
+               
+                return;
+            }
+
+            console.log('Validación pasada. Datos leídos:');
+            console.log({ nombre, descripcion, precio, imagen });
             // TAREA 8:
             if (nombre.trim() === '' || descripcion.trim() === '' || precio.trim() === '' || imagen.trim() === '') {
                 alert('Todos los campos son obligatorios.');
