@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const precio = document.querySelector('#precio').value;
             const imagen = document.querySelector('#imagen').value;
 
-            // TAREA 8: Validar que los campos no estén vacíos
+            // TAREA 8: 
             if (nombre.trim() === '' || descripcion.trim() === '' || precio.trim() === '' || imagen.trim() === '') {
                 // Si algún campo está vacío, mostramos una alerta
                 alert('Todos los campos son obligatorios.');
