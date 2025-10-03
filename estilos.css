@@ -1,10 +1,11 @@
+/* === ESTILOS PARA EL FORMULARIO === */
 .product-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  padding: 1rem;
-  margin: 0.5rem;
-  background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    margin: 0.5rem;
+    background: #fff;
 }
 
 /*TAREA 4: ESTILOS PARA EL FORMULARIO DE AGREGAR PRODUCTO*/
@@ -16,14 +17,17 @@
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Título */
 h1 {
     text-align: center;
-    color: #c56c39; 
+    color: #c56c39;
     margin-bottom: 25px;
+    color: #c56c39; 
+    margin-bottom: 26px;
 }
 
 /* Grupo que contiene la etiqueta y el input */
@@ -57,22 +61,38 @@ h1 {
     box-shadow: 0 0 8px rgba(230, 126, 34, 0.3);
 }
 
-/*TAREA 5: ESTILOS PARA EL BOTÓN DE ENVÍO*/
+/* === ESTILOS PARA EL BOTÓN DE ENVÍO === */
 .btn-submit {
     display: block;
     width: 100%;
     padding: 12px;
+    font-size: 16px;
+    background-color: #e67e22;
+    color: white;
     border: none;
     border-radius: 5px;
-    background-color: #e67e22; 
-    color: white;
-    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 10px; 
-    transition: background-color 0.3s ease;
 }
 
 .btn-submit:hover {
+    background-color: #c14f03;
     background-color: #d35400; 
+}
+
+/*BOTON DELETE*/
+.delete-btn {
+  background-color: #DC3545; 
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer; 
+  margin-top: 10px; 
+}
+
+
+.delete-btn:hover {
+  background-color: #C82333;
+    box-shadow: 0 0 8px rgba(230, 126, 34, 0.3); /*sombras*/
 }
