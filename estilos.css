@@ -57,7 +57,7 @@ h1 {
     box-shadow: 0 0 8px rgba(230, 126, 34, 0.3);
 }
 
-/*TAREA 5: ESTILOS PARA EL BOTÓN DE ENVÍO*/
+/* === ESTILOS PARA EL BOTÓN DE ENVÍO === */
 .btn-submit {
     display: block;
     width: 100%;
