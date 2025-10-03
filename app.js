@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (nombre.trim() === '' || descripcion.trim() === '' || precio.trim() === '' || imagen.trim() === '') {
                 // Si algún campo está vacío, mostramos una alerta
                 alert('Todos los campos son obligatorios.');
-                // y detenemos la ejecución con 'return'
+               
                 return;
             }
 
