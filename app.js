@@ -13,14 +13,20 @@ function renderProduct(product) {
 }
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* TAREAS DE CÉSAR (FUNCIONALIDAD CREATE) */
+    /* TAREAS DE CÉSAR */
+
+
+ddocument.addEventListener('DOMContentLoaded', () => {
+    /*  --FORMULARIO DE AGREGAR PRODUCTO  */
+    /* TAREA 6 */
+
     const formulario = document.querySelector('#form-agregar-producto');
 
     if (formulario) {
         formulario.addEventListener('submit', (evento) => {
             evento.preventDefault();
             
-            // TAREA 7
+            // TAREA 7 --
             const nombre = document.querySelector('#nombre').value;
             const descripcion = document.querySelector('#descripcion').value;
             const precio = document.querySelector('#precio').value;
