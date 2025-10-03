@@ -4,6 +4,8 @@ let baseDeDatosProductos = [];
 
 
 
+// app.js 
+// app.js
 function renderProduct(product) {
   return `
     <div class="product-card">
@@ -21,6 +23,15 @@ function renderProduct(product) {
 
 // Lógica principal que se ejecuta al 
 document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
+
+    /* TAREAS DE CÉSAR */
+
+
+ddocument.addEventListener('DOMContentLoaded', () => {
+    /*  --FORMULARIO DE AGREGAR PRODUCTO  */
+    /* TAREA 6 */
+
     const formulario = document.querySelector('#form-agregar-producto');
 
     if (formulario) {
@@ -28,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             evento.preventDefault();
             
             // Tarea 7: Leer los datos de los inputs
+            // TAREA 7 --
             const nombre = document.querySelector('#nombre').value;
             const descripcion = document.querySelector('#descripcion').value;
             const precio = document.querySelector('#precio').value;
@@ -54,6 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
             formulario.reset();
 
             console.log('Base de datos actual:', baseDeDatosProductos);
+            console.log('Datos leídos del formulario:');
+            console.log({ nombre, descripcion, precio, imagen });
+            
         });
     }
 });
