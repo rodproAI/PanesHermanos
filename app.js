@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Si la validación pasa, continuamos y mostramos los datos
             console.log('Validación pasada. Datos leídos:');
             console.log({ nombre, descripcion, precio, imagen });
         });
