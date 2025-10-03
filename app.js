@@ -10,7 +10,7 @@ function renderProduct(product) {
 }
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* TAREAS DE CÉSAR (FUNCIONALIDAD CREATE   */
+    /* TAREAS DE CÉSAR */
     const formulario = document.querySelector('#form-agregar-producto');
 
     if (formulario) {
