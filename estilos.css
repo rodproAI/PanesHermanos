@@ -77,5 +77,10 @@ h1 {
 }
 
 .btn-submit:active {
-    transform: translateY(2px); /* Mueve el botón 2px hacia abajo */
+    transform: translateY(2px);
+}
+
+.btn-submit:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
 }
