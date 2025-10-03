@@ -4,31 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Formulario para agregar productos a la panadería.">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cesar Cruz">
+    <meta name="keywords" content="panadería, agregar, producto, formulario">
     <title>Panadería - Agregar Producto</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body id="page-add-product">
+    <main id="add-product-section" role="main">
 <body>
     <main>
         <header>
             <h1 id="titulo-formulario">Agregar Nuevo Pan</h1>
         </header>
 
-        <form id="form-agregar-producto">
-            <div class="form-group">
-                <label for="nombre">Nombre del pan:</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
+        <form id="form-agregar-producto" novalidate>
+            <fieldset>
+                <legend>Datos del Producto</legend>
+                <div class="form-group">
+                    <label for="nombre">Nombre del pan:</label>
+                    <input type="text" id="nombre" name="nombre" required minlength="3" aria-label="Nombre del producto">
+                </div>
+            </fieldset>
 
             <div class="form-group">
                 <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+                <textarea id="descripcion" name="descripcion" rows="4" required minlength="10" aria-label="Descripción del producto"></textarea>
             </div>
 
-            <button type="submit" class="btn-submit">Agregar Producto</button>
+           <button type="submit" class="btn-submit" aria-label="Agregar nuevo producto">Agregar Producto</button>
         </form>
     </main>
 
