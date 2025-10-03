@@ -11,7 +11,7 @@ function renderProduct(product) {
 
 
 ddocument.addEventListener('DOMContentLoaded', () => {
-    /*  LÓGICA PARA EL FORMULARIO DE AGREGAR PRODUCTO  */
+    /*  FORMULARIO DE AGREGAR PRODUCTO  */
     /* TAREA 6 */
 
     const formulario = document.querySelector('#form-agregar-producto');
