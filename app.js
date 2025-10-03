@@ -10,8 +10,8 @@ function renderProduct(product) {
 }
 
 
-document.addEventListener('DOMContentLoaded', () => {
-
+ddocument.addEventListener('DOMContentLoaded', () => {
+    // El código de la aplicación irá aquí
     /* TAREA 6 DE CÉSAR (FUNCIONALIDAD CREATE)  */
 
     const formulario = document.querySelector('#form-agregar-producto');
