@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // TAREA 8:
             if (nombre.trim() === '' || descripcion.trim() === '' || precio.trim() === '' || imagen.trim() === '') {
                 alert('Todos los campos son obligatorios.');
-                return; // Detiene la ejecución si hay un error
+                return; 
             }
 
             // TAREA 9: Crear un objeto con los datos del producto
