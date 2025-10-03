@@ -65,6 +65,8 @@ h1 {
     font-size: 16px;
     background-color: #e67e22;
     color: white;
+    border: none;
+    border-radius: 5px;
 }
 
 .btn-submit:hover {
