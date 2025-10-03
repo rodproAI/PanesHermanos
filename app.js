@@ -1,3 +1,9 @@
+// app.js
+
+// 1. Array que funcionará como base de datos temporal
+let baseDeDatosProductos = [];
+
+// Función de Daza para renderizar un producto
 
 
 let baseDeDatosProductos = [];
@@ -38,6 +44,7 @@ ddocument.addEventListener('DOMContentLoaded', () => {
         formulario.addEventListener('submit', (evento) => {
             evento.preventDefault();
             
+            // Tarea 7: 
             // Tarea 7: Leer los datos de los inputs
             // TAREA 7 --
             const nombre = document.querySelector('#nombre').value;
@@ -45,6 +52,7 @@ ddocument.addEventListener('DOMContentLoaded', () => {
             const precio = document.querySelector('#precio').value;
             const imagen = document.querySelector('#imagen').value;
 
+            // Tarea 8:
             // Tarea 8: Validar que los campos no estén vacíos
             if (nombre.trim() === '' || descripcion.trim() === '' || precio.trim() === '' || imagen.trim() === '') {
                 alert('Todos los campos son obligatorios.');
@@ -64,6 +72,7 @@ ddocument.addEventListener('DOMContentLoaded', () => {
             baseDeDatosProductos.push(producto);
             alert('¡Producto agregado con éxito!');
             formulario.reset();
+            console.log('Base de datos actual:', baseDeDatosProductos);
 
             console.log('Base de datos actual:', baseDeDatosProductos);
             console.log('Datos leídos del formulario:');
