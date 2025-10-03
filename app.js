@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formulario.addEventListener('submit', (evento) => {
             evento.preventDefault();
             
-            // Tarea 7: Leer los datos de los 
+            // Tarea 7: Leer los datos de 
             const nombre = document.querySelector('#nombre').value;
             const descripcion = document.querySelector('#descripcion').value;
             const precio = document.querySelector('#precio').value;
