@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // TAREA 8: 
             if (nombre.trim() === '' || descripcion.trim() === '' || precio.trim() === '' || imagen.trim() === '') {
-                // Si algún campo está vacío, mostramos una alerta
+                // Si algún campo está vacío, mostramos una 
                 alert('Todos los campos son obligatorios.');
                
                 return;
