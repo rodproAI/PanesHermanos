@@ -1,3 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-g">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería - Editar pan</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <main>
+        <h1>Editar Pan</h1>
+        <form id="form-agregar-producto">
+            <input type="hidden" id="edit-id">
+
+
+            <div class="form-group">
+                <label for="nombre">Nombre del pan:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" min="0" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="imagen">URL de la Imagen:</label>
+                <input type="url" id="imagen" name="imagen" placeholder="https://ejemplo.com/imagen.jpg" required>
+            </div>
+            <button type="submit" class="btn-submit">Guardar Cambios</button>
+        </form>
+    </main>
+    <script src="js/app.js"></script>
 
 
 
