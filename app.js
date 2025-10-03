@@ -11,6 +11,12 @@ function renderProduct(product) {
 document.addEventListener('DOMContentLoaded', () => {
 
     /* TAREAS DE CÉSAR */
+
+
+ddocument.addEventListener('DOMContentLoaded', () => {
+    /*  --FORMULARIO DE AGREGAR PRODUCTO  */
+    /* TAREA 6 */
+
     const formulario = document.querySelector('#form-agregar-producto');
 
     if (formulario) {

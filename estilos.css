@@ -1,3 +1,4 @@
+/* === ESTILOS PARA EL FORMULARIO === */
 .product-card {
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -19,11 +20,12 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+
 /* Título */
 h1 {
     text-align: center;
     color: #c56c39; 
-    margin-bottom: 25px;
+    margin-bottom: 26px;
 }
 
 /* Grupo que contiene la etiqueta y el input */
@@ -75,4 +77,5 @@ h1 {
 
 .btn-submit:hover {
     background-color: #d35400; 
+    box-shadow: 0 0 8px rgba(230, 126, 34, 0.3); /*sombras*/
 }
