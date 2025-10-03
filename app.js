@@ -11,7 +11,7 @@ function renderProduct(product) {
 
 
 ddocument.addEventListener('DOMContentLoaded', () => {
-    // El código de la aplicación irá aquí
+    /* === LÓGICA PARA EL FORMULARIO DE AGREGAR PRODUCTO === */
     /* TAREA 6 DE CÉSAR (FUNCIONALIDAD CREATE)  */
 
     const formulario = document.querySelector('#form-agregar-producto');
