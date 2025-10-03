@@ -1,10 +1,10 @@
 .product-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  padding: 1rem;
-  margin: 0.5rem;
-  background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    margin: 0.5rem;
+    background: #fff;
 }
 
 /*TAREA 4: ESTILOS PARA EL FORMULARIO DE AGREGAR PRODUCTO*/
@@ -16,13 +16,13 @@
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Título */
 h1 {
     text-align: center;
-    color: #c56c39; 
+    color: #c56c39;
     margin-bottom: 25px;
 }
 
@@ -63,7 +63,10 @@ h1 {
     width: 100%;
     padding: 12px;
     font-size: 16px;
+    background-color: #e67e22;
+    color: white;
 }
+
 .btn-submit:hover {
-    background-color: #d35400; 
+    background-color: #d35400;
 }
