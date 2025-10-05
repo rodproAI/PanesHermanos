@@ -96,3 +96,24 @@ h1 {
   background-color: #C82333;
     box-shadow: 0 0 8px rgba(230, 126, 34, 0.3); /*sombras*/
 }
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 16px;
+  position: fixed;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
