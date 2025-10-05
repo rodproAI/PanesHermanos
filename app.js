@@ -1,9 +1,6 @@
 // app.js
-
-// Array de datos (simulación de base de datos)
 let baseDeDatosProductos = [];
 
-// Función para renderizar una tarjeta de producto
 function renderProduct(product) {
   return `
     <div class="product-card">
@@ -18,7 +15,6 @@ function renderProduct(product) {
   `;
 }
 
-// Función para mostrar todos los productos
 function displayProducts() {
     const productContainer = document.querySelector('#product-container');
     if (productContainer) {
@@ -29,32 +25,42 @@ function displayProducts() {
     }
 }
 
-// Lógica que se ejecuta al cargar la página
+function deleteProductById(id) {
+    baseDeDatosProductos = baseDeDatosProductos.filter(producto => producto.id.toString() !== id);
+    displayProducts();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    const formulario = document.querySelector('#form-agregar-producto');
+    if (formulario) {
+        formulario.addEventListener('submit', (evento) => {
+            evento.preventDefault();
+            const nombre = document.querySelector('#nombre').value;
+            const descripcion = document.querySelector('#descripcion').value;
+            const precio = document.querySelector('#precio').value;
+            const imagen = document.querySelector('#imagen').value;
+            if (nombre.trim() === '' || descripcion.trim() === '' || precio.trim() === '' || imagen.trim() === '') {
+                alert('Todos los campos son obligatorios.');
+                return;
+            }
+            const producto = { id: Date.now(), nombre, descripcion, precio: parseFloat(precio), imagen };
+            baseDeDatosProductos.push(producto);
+            alert('¡Producto agregado con éxito!');
+            formulario.reset();
+            displayProducts();
+        });
+    }
 
     const productContainer = document.querySelector('#product-container');
     if (productContainer) {
-
       productContainer.addEventListener('click', (event) => {
-        // Verificamos si el clic fue en un botón de eliminar
         if (event.target.classList.contains('delete-btn')) {
-          
-          // ==============================================
-          // == INICIA CÓDIGO DE LA TAREA 5              ==
-          // ==============================================
           if (confirm('¿Estás seguro de que quieres eliminar este producto?')) {
             const productId = event.target.dataset.id;
-            console.log('Usuario confirmó. ID a eliminar:', productId);
+            deleteProductById(productId);
           }
-          // ==============================================
-          // == TERMINA CÓDIGO DE LA TAREA 5             ==
-          // ==============================================
-
         }
       });
-
     }
-
-    // Carga inicial de productos
     displayProducts();
 });
