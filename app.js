@@ -1,29 +1,20 @@
 // app.js
-<<<<<<< Updated upstream
-=======
 
 // 1. Array que funcionará como base de datos temporal
 let baseDeDatosProductos = [];
 
 // 2. Función para renderizar un producto en el DOM
->>>>>>> Stashed changes
 function renderProduct(product) {
   return `
     <div class="product-card">
       <img src="${product.image}" alt="${product.name}">
       <h2 class="product-name">${product.name}</h2>
-<<<<<<< Updated upstream
-      <p class="product-price">${product.price}</p>
-      // La siguiente línea es la que debes agregar:
-      <button class="delete-btn" data-id="${product.id}">Eliminar</button>
-=======
       <p class="product-price">$${product.price}</p>
       
       <div class="product-actions">
         <button class="edit-btn" data-id="${product.id}">Editar</button>
         <button class="delete-btn" data-id="${product.id}">Eliminar</button>
       </div>
->>>>>>> Stashed changes
     </div>
   `;
 }
@@ -51,23 +42,13 @@ function deleteProductById(id) {
 // 3. Lógica principal que se ejecuta cuando el DOM está listo
 document.addEventListener('DOMContentLoaded', () => {
 
-<<<<<<< Updated upstream
-    /* TAREA 6 DE CÉSAR (FUNCIONALIDAD CREATE)  */
-
-=======
     /* ==============================================
        SECCIÓN DE CÉSAR - FORMULARIO DE AGREGAR PRODUCTO
        ============================================== */
->>>>>>> Stashed changes
     const formulario = document.querySelector('#form-agregar-producto');
     if (formulario) {
         formulario.addEventListener('submit', (evento) => {
             evento.preventDefault();
-<<<<<<< Updated upstream
-            console.log('Formulario capturado, ¡página no recargada!');
-        });
-    }
-=======
             const nombre = document.querySelector('#nombre').value;
             const descripcion = document.querySelector('#descripcion').value;
             const precio = document.querySelector('#precio').value;
@@ -114,5 +95,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Carga inicial de productos (si es necesario)
     displayProducts();
->>>>>>> Stashed changes
 });
