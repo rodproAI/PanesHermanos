@@ -1,16 +1,15 @@
 // app.js
 
-// 1. Array que funcionará como base de datos temporal
+// Array de datos (simulación de base de datos)
 let baseDeDatosProductos = [];
 
-// 2. Función para renderizar un producto en el DOM
+// Función para renderizar una tarjeta de producto
 function renderProduct(product) {
   return `
     <div class="product-card">
       <img src="${product.image}" alt="${product.name}">
       <h2 class="product-name">${product.name}</h2>
       <p class="product-price">$${product.price}</p>
-      
       <div class="product-actions">
         <button class="edit-btn" data-id="${product.id}">Editar</button>
         <button class="delete-btn" data-id="${product.id}">Eliminar</button>
@@ -19,7 +18,7 @@ function renderProduct(product) {
   `;
 }
 
-// Función para mostrar/refrescar todos los productos en el DOM
+// Función para mostrar todos los productos
 function displayProducts() {
     const productContainer = document.querySelector('#product-container');
     if (productContainer) {
@@ -30,61 +29,30 @@ function displayProducts() {
     }
 }
 
-// Función para eliminar un producto por su ID
-function deleteProductById(id) {
-    // Filtra el array, creando uno nuevo sin el producto a eliminar
-    baseDeDatosProductos = baseDeDatosProductos.filter(producto => producto.id.toString() !== id);
-    // Vuelve a "dibujar" los productos para que el cambio se refleje en la pantalla
-    displayProducts();
-}
-
-
-// 3. Lógica principal que se ejecuta cuando el DOM está listo
+// Lógica que se ejecuta al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
 
-    // SECCIÓN DE CÉSAR - FORMULARIO DE AGREGAR PRODUCTO
-    const formulario = document.querySelector('#form-agregar-producto');
-    if (formulario) {
-        formulario.addEventListener('submit', (evento) => {
-            evento.preventDefault();
-            const nombre = document.querySelector('#nombre').value;
-            const descripcion = document.querySelector('#descripcion').value;
-            const precio = document.querySelector('#precio').value;
-            const imagen = document.querySelector('#imagen').value;
-
-            if (nombre.trim() === '' || descripcion.trim() === '' || precio.trim() === '' || imagen.trim() === '') {
-                alert('Todos los campos son obligatorios.');
-                return;
-            }
-
-            const producto = {
-                id: Date.now(),
-                nombre: nombre,
-                descripcion: descripcion,
-                precio: parseFloat(precio),
-                imagen: imagen
-            };
-
-            baseDeDatosProductos.push(producto);
-            alert('¡Producto agregado con éxito!');
-            formulario.reset();
-            displayProducts(); // Actualiza la vista para mostrar el nuevo producto
-        });
-    }
-
-    // SECCIÓN DE RODRIGO - LÓGICA PARA ELIMINAR
     const productContainer = document.querySelector('#product-container');
     if (productContainer) {
+
       productContainer.addEventListener('click', (event) => {
+        // Verificamos si el clic fue en un botón de eliminar
         if (event.target.classList.contains('delete-btn')) {
-          const userConfirmed = confirm('¿Estás seguro de que quieres eliminar este producto?');
           
-          if (userConfirmed) {
+          // ==============================================
+          // == INICIA CÓDIGO DE LA TAREA 5              ==
+          // ==============================================
+          if (confirm('¿Estás seguro de que quieres eliminar este producto?')) {
             const productId = event.target.dataset.id;
-            deleteProductById(productId);
+            console.log('Usuario confirmó. ID a eliminar:', productId);
           }
+          // ==============================================
+          // == TERMINA CÓDIGO DE LA TAREA 5             ==
+          // ==============================================
+
         }
       });
+
     }
 
     // Carga inicial de productos
