@@ -1,18 +1,9 @@
-// app.js 
 // app.js
 
 // 1. Array que funcionará como base de datos temporal
 let baseDeDatosProductos = [];
 
-// Función de Daza para renderizar un producto
-
-
-let baseDeDatosProductos = [];
-
-
-
-// app.js 
-// app.js
+// 2. Función para renderizar un producto en el DOM
 function renderProduct(product) {
   return `
     <div class="product-card">
@@ -22,76 +13,50 @@ function renderProduct(product) {
       
       <div class="product-actions">
         <button class="edit-btn" data-id="${product.id}">Editar</button>
+        <button class="delete-btn" data-id="${product.id}">Eliminar</button>
       </div>
     </div>
   `;
 }
 
+// Función para mostrar/refrescar todos los productos en el DOM
+function displayProducts() {
+    const productContainer = document.querySelector('#product-container');
+    if (productContainer) {
+        productContainer.innerHTML = '';
+        baseDeDatosProductos.forEach(producto => {
+            productContainer.innerHTML += renderProduct(producto);
+        });
+    }
+}
+
+// Función para eliminar un producto por su ID
+function deleteProductById(id) {
+    // Filtra el array, creando uno nuevo sin el producto a eliminar
+    baseDeDatosProductos = baseDeDatosProductos.filter(producto => producto.id.toString() !== id);
+    // Vuelve a "dibujar" los productos para que el cambio se refleje en la pantalla
+    displayProducts();
+}
+
+
+// 3. Lógica principal que se ejecuta cuando el DOM está listo
 document.addEventListener('DOMContentLoaded', () => {
 
-
-// Lógica principal que se ejecuta al 
-document.addEventListener('DOMContentLoaded', () => {
-document.addEventListener('DOMContentLoaded', () => {
-
-    /* TAREAS DE CÉSAR */
-
-
-ddocument.addEventListener('DOMContentLoaded', () => {
-    /*  --FORMULARIO DE AGREGAR PRODUCTO  */
-    /* TAREA 6 */
-
+    // SECCIÓN DE CÉSAR - FORMULARIO DE AGREGAR PRODUCTO
     const formulario = document.querySelector('#form-agregar-producto');
-
     if (formulario) {
         formulario.addEventListener('submit', (evento) => {
             evento.preventDefault();
-            
-            // TAREA 7
-            // TAREA 7: 
-            // Tarea 7: 
-            // Tarea 7: Leer los datos de los inputs
-            // TAREA 7 --
             const nombre = document.querySelector('#nombre').value;
             const descripcion = document.querySelector('#descripcion').value;
             const precio = document.querySelector('#precio').value;
             const imagen = document.querySelector('#imagen').value;
 
-            // TAREA 8: 
             if (nombre.trim() === '' || descripcion.trim() === '' || precio.trim() === '' || imagen.trim() === '') {
-                // Si algún campo está vacío, mostramos una 
                 alert('Todos los campos son obligatorios.');
-               
                 return;
             }
 
-            console.log('Validación pasada. Datos leídos:');
-            console.log({ nombre, descripcion, precio, imagen });
-            // TAREA 8:
-            if (nombre.trim() === '' || descripcion.trim() === '' || precio.trim() === '' || imagen.trim() === '') {
-                alert('Todos los campos son obligatorios.');
-                return; 
-            }
-
-            // TAREA 9: 
-            const producto = {
-                id: Date.now(), 
-                nombre: nombre,
-                descripcion: descripcion,
-                precio: parseFloat(precio), 
-                imagen: imagen
-            };
-
-            console.log('Objeto de producto creado:');
-            console.log(producto);
-            // Tarea 8:
-            // Tarea 8: Validar que los campos no estén vacíos
-            if (nombre.trim() === '' || descripcion.trim() === '' || precio.trim() === '' || imagen.trim() === '') {
-                alert('Todos los campos son obligatorios.');
-                return; // Detiene la ejecución si hay un error
-            }
-
-            // Tarea 9: Crear un objeto con los datos del producto
             const producto = {
                 id: Date.now(),
                 nombre: nombre,
@@ -100,16 +65,28 @@ ddocument.addEventListener('DOMContentLoaded', () => {
                 imagen: imagen
             };
 
-            // Tarea 10: Guardar el producto y limpiar el formulario
             baseDeDatosProductos.push(producto);
             alert('¡Producto agregado con éxito!');
             formulario.reset();
-            console.log('Base de datos actual:', baseDeDatosProductos);
-
-            console.log('Base de datos actual:', baseDeDatosProductos);
-            console.log('Datos leídos del formulario:');
-            console.log({ nombre, descripcion, precio, imagen });
-            
+            displayProducts(); // Actualiza la vista para mostrar el nuevo producto
         });
     }
+
+    // SECCIÓN DE RODRIGO - LÓGICA PARA ELIMINAR
+    const productContainer = document.querySelector('#product-container');
+    if (productContainer) {
+      productContainer.addEventListener('click', (event) => {
+        if (event.target.classList.contains('delete-btn')) {
+          const userConfirmed = confirm('¿Estás seguro de que quieres eliminar este producto?');
+          
+          if (userConfirmed) {
+            const productId = event.target.dataset.id;
+            deleteProductById(productId);
+          }
+        }
+      });
+    }
+
+    // Carga inicial de productos
+    displayProducts();
 });
