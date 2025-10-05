@@ -59,6 +59,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const productId = event.target.dataset.id;
             deleteProductById(productId);
           }
+
+
+function showToast() {
+  const toast = document.getElementById("toast-notification");
+  toast.classList.add("show");
+  setTimeout(function(){ toast.classList.remove("show"); }, 3000);
+}
+
+function deleteProductById(id) {
+    baseDeDatosProductos = baseDeDatosProductos.filter(producto => producto.id.toString() !== id);
+    displayProducts();
+    showToast(); // <-- LÍNEA NUEVA
+}
         }
       });
     }
