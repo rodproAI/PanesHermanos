@@ -28,7 +28,25 @@ function renderProduct(product) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+// Lógica para botones de edición 
+const productContainer = document.querySelector('#product-container'); 
+if (productContainer) { 
+  productContainer.addEventListener('click', (evento) => {
+    // Verificamos si el clic fue en un botón con la clase 'edit-btn'
+    if (evento.target.classList.contains('edit-btn')) {
+      console.log('¡Clic en un botón Editar detectado!'); 
+      // Obtener ID del producto
+      const productId = evento.target.getAttribute('data-id');
+      // Guardar en almacenamiento local
+      localStorage.setItem('editProductId', productId);
+      //Redirigir a la pagina de edición
+      window.location.href = 'editar_producto.html';
 
+
+
+    } 
+ });
+}
 
 // Lógica principal que se ejecuta al 
 document.addEventListener('DOMContentLoaded', () => {
