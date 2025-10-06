@@ -102,7 +102,7 @@ ddocument.addEventListener('DOMContentLoaded', () => {
 
 
             alert('Producto actualizado correctamente.');
-            alert('¡Cambios guardados!');
+            alert('¡Cambio guardado!');
             alert('Producto actualizado correctamente.');
             window.location.href = 'index.html';
             localStorage.removeItem('editProductId');
