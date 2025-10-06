@@ -102,7 +102,8 @@ ddocument.addEventListener('DOMContentLoaded', () => {
 
             // comentario para la redirección
             alert('Producto actualizado correctamente.');
-            
+            alert('¡Cambios guardados!');
+
             // Tarea 10: Guardar el producto y limpiar el formulario
             baseDeDatosProductos.push(producto);
             alert('¡Producto agregado con éxito!');
