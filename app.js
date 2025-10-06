@@ -38,6 +38,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 ddocument.addEventListener('DOMContentLoaded', () => {
+    const formEditar = document.querySelector('#form-editar-producto'); 
+    if (formEditar) {
+        const productId = localStorage.getItem('editProductId');
+        const productoAEditar = baseDeDatosProductos.find(producto => producto.id == productId);
+
+        if (productoAEditar) {
+            document.querySelector('#edit-id').value = productoAEditar.id;
+            document.querySelector('#nombre').value = productoAEditar.nombre;
+            document.querySelector('#descripcion').value = productoAEditar.descripcion;
+            document.querySelector('#precio').value = productoAEditar.precio;
+            document.querySelector('#imagen').value = productoAEditar.imagen;
+        }
+        formEditar.addEventListener('submit', (evento) => {
+            evento.preventDefault();
+            //Lectura de los datos de edicion
+            console.log('Formulario de edición enviado.');
+        });
+        
+    }
+});
     /*  --FORMULARIO DE AGREGAR PRODUCTO  */
     /* TAREA 6 */
 
