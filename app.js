@@ -28,7 +28,7 @@ function renderProduct(product) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-
+// Lógica para botones de edición 
 
 // Lógica principal que se ejecuta al 
 document.addEventListener('DOMContentLoaded', () => {
