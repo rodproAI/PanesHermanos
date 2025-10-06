@@ -100,6 +100,8 @@ ddocument.addEventListener('DOMContentLoaded', () => {
                 imagen: imagen
             };
 
+            // comentario para la redirección
+
             // Tarea 10: Guardar el producto y limpiar el formulario
             baseDeDatosProductos.push(producto);
             alert('¡Producto agregado con éxito!');
@@ -110,6 +112,8 @@ ddocument.addEventListener('DOMContentLoaded', () => {
             console.log('Datos leídos del formulario:');
             console.log({ nombre, descripcion, precio, imagen });
             
+
+
         });
     }
 });
