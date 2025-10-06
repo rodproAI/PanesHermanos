@@ -105,7 +105,7 @@ ddocument.addEventListener('DOMContentLoaded', () => {
             alert('¡Cambio guardado!');
             alert('Producto actualizado correctamente.');
             window.location.href = 'index.html';
-            localStorage.removeItem('editProductId'); //LINEA
+            localStorage.removeItem('editProductId'); 
 
             // Tarea 10: Guardar el producto y limpiar el formulario
             baseDeDatosProductos.push(producto);
