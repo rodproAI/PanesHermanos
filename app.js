@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const productContainer = document.querySelector('#product-container'); 
 if (productContainer) { 
   productContainer.addEventListener('click', (evento) => {
-    // Verificamos si el clic fue en un botón con la clase 'edit-btn'
+    // Verificamos si el clic fue en un botón con la clase 'edit-bt'
     if (evento.target.classList.contains('edit-btn')) {
       console.log('¡Clic en un botón Editar detectado!'); 
     
