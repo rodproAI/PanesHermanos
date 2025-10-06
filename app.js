@@ -33,7 +33,37 @@ document.addEventListener('DOMContentLoaded', () => {
 // Lógica principal que se ejecuta al 
 document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
+   
+    const formEditar = document.querySelector('#form-editar-producto'); 
 
+ 
+    if (formEditar) {
+        const productId = localStorage.getItem('editProductId');
+        const productoAEditar = baseDeDatosProductos.find(producto => producto.id == productId);
+
+        if (productoAEditar) {
+            document.querySelector('#edit-id').value = productoAEditar.id;
+            document.querySelector('#nombre').value = productoAEditar.nombre;
+            document.querySelector('#descripcion').value = productoAEditar.descripcion;
+            document.querySelector('#precio').value = productoAEditar.precio;
+            document.querySelector('#imagen').value = productoAEditar.imagen;
+        }
+            const indiceProducto = baseDeDatosProductos.findIndex(producto => producto.id == id); 
+            if (indiceProducto !== -1) {
+                baseDeDatosProductos[indiceProducto].nombre = nombre;
+                baseDeDatosProductos[indiceProducto].descripcion = descripcion;
+                baseDeDatosProductos[indiceProducto].precio = parseFloat(precio);
+
+            }
+        formEditar.addEventListener('submit', (evento) => {
+            evento.preventDefault(); 
+            console.log('Formulario de edición enviado.');
+            
+        });
+      
+    }
+});
     /* TAREAS DE CÉSAR */
 
 
