@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         formEditar.addEventListener('submit', (evento) => {
             evento.preventDefault();
-            console.log('Submit detectado en formulario de edición.');
+            console.log('Formulario de edición enviado.');
 
 
         });
