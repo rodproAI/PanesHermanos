@@ -33,6 +33,28 @@ document.addEventListener('DOMContentLoaded', () => {
 // Lógica principal que se ejecuta al 
 document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
+    // Lógica para la página de edición (editar_producto.html)
+    const formEditar = document.querySelector('#form-editar-producto'); // Asegúrate que tu form de edición tenga este ID
+    // Listener para el envio del formulario de edición
+    if (formEditar) {
+        const productId = localStorage.getItem('editProductId');
+        const productoAEditar = baseDeDatosProductos.find(producto => producto.id == productId);
+
+        if (productoAEditar) {
+            document.querySelector('#edit-id').value = productoAEditar.id;
+            document.querySelector('#nombre').value = productoAEditar.nombre;
+            document.querySelector('#descripcion').value = productoAEditar.descripcion;
+            document.querySelector('#precio').value = productoAEditar.precio;
+            document.querySelector('#imagen').value = productoAEditar.imagen;
+        }
+        formEditar.addEventListener('submit', (evento) => {
+            evento.preventDefault();
+            console.log('Formulario de edición enviado');
+
+
+        });
+    }
+});
 
     /* TAREAS DE CÉSAR */
 
