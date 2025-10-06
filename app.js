@@ -37,8 +37,6 @@ if (productContainer) {
       console.log('¡Clic en un botón Editar detectado!'); 
       // Obtener ID del producto
       const productId = evento.target.getAttribute('data-id');
-      // Verificación de ID
-      //console.log('ID del producto:', productId);
       // Guardar en almacenamiento local
       localStorage.setItem('editProductId', productId);
 
