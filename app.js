@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (indiceProducto !== -1) {
                 baseDeDatosProductos[indiceProducto].nombre = nombre;
                 baseDeDatosProductos[indiceProducto].descripcion = descripcion;
+                baseDeDatosProductos[indiceProducto].precio = parseFloat(precio);
 
             }
         formEditar.addEventListener('submit', (evento) => {
