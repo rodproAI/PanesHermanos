@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
    const formEditar = document.querySelector('#form-editar-producto');
 
    if (formEditar) {
+       const productId = localStorage.getItem('editProductId');
    }
 
 
