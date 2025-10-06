@@ -40,7 +40,8 @@ if (productContainer) {
       // Guardar en almacenamiento local
       localStorage.setItem('editProductId', productId);
       //Redirigir a la pagina de edición
-      
+      window.location.href = 'editar_producto.html';
+
 
 
     } 
