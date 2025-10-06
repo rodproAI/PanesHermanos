@@ -35,6 +35,7 @@ if (productContainer) {
     // Verificamos si el clic fue en un botón con la clase 'edit-btn'
     if (evento.target.classList.contains('edit-btn')) {
       //obtener ID del producto
+      const productId = evento.target.getAttribute('data-id');
 
       console.log('¡Clic en un botón Editar detectado!'); 
 
