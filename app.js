@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
            document.querySelector('#descripcion').value = productoAEditar.descripcion;
            document.querySelector('#precio').value = productoAEditar.precio;
            document.querySelector('#imagen').value = productoAEditar.imagen;
-
        }
    }
 
