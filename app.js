@@ -106,6 +106,7 @@ ddocument.addEventListener('DOMContentLoaded', () => {
             alert('Producto actualizado correctamente.');
             // Enviar al usuario al inicio
             window.location.href = 'index.html';
+            localStorage.removeItem('editProductId');
 
             // Tarea 10: Guardar el producto y limpiar el formulario
             baseDeDatosProductos.push(producto);
