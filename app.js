@@ -33,6 +33,21 @@ document.addEventListener('DOMContentLoaded', () => {
 // Lógica principal que se ejecuta al 
 document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
+//TAREA 5 DAVID
+   const formEditar = document.querySelector('#form-editar-producto');
+
+   if (formEditar) {
+       const productId = localStorage.getItem('editProductId');
+       const productoAEditar = baseDeDatosProductos.find(producto => producto.id == productId);
+       if (productoAEditar) {
+           document.querySelector('#edit-id').value = productoAEditar.id;
+           document.querySelector('#nombre').value = productoAEditar.nombre;
+           document.querySelector('#descripcion').value = productoAEditar.descripcion;
+           document.querySelector('#precio').value = productoAEditar.precio;
+           document.querySelector('#imagen').value = productoAEditar.imagen;
+       }
+   }
+
 
     /* TAREAS DE CÉSAR */
 
@@ -72,7 +87,7 @@ ddocument.addEventListener('DOMContentLoaded', () => {
                 alert('Todos los campos son obligatorios.');
                 return; 
             }
-
+            
             // TAREA 9: 
             const producto = {
                 id: Date.now(), 
