@@ -29,9 +29,16 @@ function renderProduct(product) {
 
 document.addEventListener('DOMContentLoaded', () => {
 // Lógica para botones de edición 
-const productContainer = document.querySelector('#product-container');
-if (productContainer) {
+const productContainer = document.querySelector('#product-container'); 
+if (productContainer) { 
+  productContainer.addEventListener('click', (evento) => {
+    if (evento.target.classList.contains('edit-btn')) {
 }
+});
+
+}
+
+
 // Lógica principal que se ejecuta al 
 document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
