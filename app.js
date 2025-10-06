@@ -51,7 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
             const indiceProducto = baseDeDatosProductos.findIndex(producto => producto.id == id); 
             if (indiceProducto !== -1) {
-                
+                baseDeDatosProductos[indiceProducto].nombre = nombre;
+                baseDeDatosProductos[indiceProducto].descripcion = descripcion;
+
             }
         formEditar.addEventListener('submit', (evento) => {
             evento.preventDefault(); 
