@@ -28,7 +28,19 @@ function renderProduct(product) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+// Lógica para botones de edición 
+const productContainer = document.querySelector('#product-container'); 
+if (productContainer) { 
+  productContainer.addEventListener('click', (evento) => {
+    // Verificamos si el clic fue en un botón con la clase 'edit-btn'
+    if (evento.target.classList.contains('edit-btn')) {
+      //obtener ID del producto
 
+      console.log('¡Clic en un botón Editar detectado!'); 
+
+    } 
+ });
+}
 
 // Lógica principal que se ejecuta al 
 document.addEventListener('DOMContentLoaded', () => {
