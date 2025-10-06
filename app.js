@@ -49,8 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('#precio').value = productoAEditar.precio;
             document.querySelector('#imagen').value = productoAEditar.imagen;
         }
-            const indiceProducto = baseDeDatosProductos.findIndex(producto => producto.id == id); //actualizar producto
-
+            const indiceProducto = baseDeDatosProductos.findIndex(producto => producto.id == id); //linea para actualziar
         formEditar.addEventListener('submit', (evento) => {
             evento.preventDefault(); 
             console.log('Formulario de edición enviado.');
