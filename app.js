@@ -35,7 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
 //TAREA 5 DAVID
    const formEditar = document.querySelector('#form-editar-producto');
-   
+
+   if (formEditar) {
+   }
 
 
     /* TAREAS DE CÉSAR */
