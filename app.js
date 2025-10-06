@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
        const productId = localStorage.getItem('editProductId');
        const productoAEditar = baseDeDatosProductos.find(producto => producto.id == productId);
        if (productoAEditar) {
+           document.querySelector('#edit-id').value = productoAEditar.id;
+
        }
    }
 
