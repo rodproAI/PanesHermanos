@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Lógica principal que se ejecuta al 
 document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
+//TAREA 5 DAVID
 
     /* TAREAS DE CÉSAR */
 
@@ -72,7 +73,7 @@ ddocument.addEventListener('DOMContentLoaded', () => {
                 alert('Todos los campos son obligatorios.');
                 return; 
             }
-
+            
             // TAREA 9: 
             const producto = {
                 id: Date.now(), 
