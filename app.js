@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
            document.querySelector('#edit-id').value = productoAEditar.id;
            document.querySelector('#nombre').value = productoAEditar.nombre;
            document.querySelector('#descripcion').value = productoAEditar.descripcion;
+           document.querySelector('#precio').value = productoAEditar.precio;
 
        }
    }
