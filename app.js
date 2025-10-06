@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
    if (formEditar) {
        const productId = localStorage.getItem('editProductId');
+       const productoAEditar = baseDeDatosProductos.find(producto => producto.id == productId);
    }
 
 
