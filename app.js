@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('#precio').value = productoAEditar.precio;
             document.querySelector('#imagen').value = productoAEditar.imagen;
         }
-        formEditar.addEventListener('submit', (e) => {
+        formEditar.addEventListener('submit', (evento) => {
             evento.preventDefault();
             console.log('Formulario de edición enviado.');
 
