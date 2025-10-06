@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
        const productoAEditar = baseDeDatosProductos.find(producto => producto.id == productId);
        if (productoAEditar) {
            document.querySelector('#edit-id').value = productoAEditar.id;
+           document.querySelector('#nombre').value = productoAEditar.nombre;
 
        }
    }
