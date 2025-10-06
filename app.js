@@ -38,7 +38,7 @@ if (productContainer) {
       // Obtener ID del producto
       const productId = evento.target.getAttribute('data-id');
       // Guardar en almacenamiento local
-      
+      localStorage.setItem('editProductId', productId);
 
 
     } 
