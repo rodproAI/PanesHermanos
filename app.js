@@ -100,7 +100,7 @@ ddocument.addEventListener('DOMContentLoaded', () => {
                 imagen: imagen
             };
 
-            // comentario para la redirección
+
             alert('Producto actualizado correctamente.');
             alert('¡Cambios guardados!');
             alert('Producto actualizado correctamente.');
